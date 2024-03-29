@@ -1,0 +1,44 @@
+goal : Mục tiêu
+enviroment: Môi trường
+Agent: Đối tượng 
+State: trạng thái
+Action: Hành động 
+Reward: Phần thưởng
+
+Q Learing: Là một thuật toán dùng trong nhiều môi trường RL 
+Lặp đi lặp lại các action và nhận được reward để xây dựng được 
+bảng look-up table gọi là Q table.
+Agent dùng Q table để tương tác với enviroment. 
+* Thuật toán :
+B1: Khởi tạo bảng Q table <Ngẫu nhiên>
+B2: Khởi tạo môi trường. Tại đây agent có S0 và có Action. Nhìn trong bảng Q table. 
+Lấy max tại Action max => (S0,A2)=> chuyển qua State mới. Đồng thời trả lại reward 
+cho (S0,A2). Reward do mình quyết định. 
+B3: Update Q table Q[S0,A2]. Công thức update Qlearning
+<tham số truyền vào: 
+Learing rate, 
+Discount factor-giá trị thể hiện sự quan tâm tới tương lai
+Reward: người dùng chọn 
+B4: Lặp lại các bước tính toán
+
+Thuật toán Deep Q Learing
+Có 2 mạng NN: Main vs Target
+Main dùng để dự tính bước đi 
+Target dùng để ước tính tương lai
+=> Việc dùng 2 mạng Nerural Network nhằm tăng tính ổn định cho mô hình 
+Replay Buffer: lưu lại lịch sử trong quá khứ
+Epsilon nhằm để tránh mạng đi vào lối mòn. 
+Select Action: sử dụng thuật toán Epsilon Greedy Policy
+Train Main NN
+
+
+
+
+
+
+
+
+
+
+
+
